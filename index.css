@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; 
+    color: #e0e0e0;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.hero-section {
+    position: relative;
+    background: url('/images/hero-background.jpg') no-repeat center center/cover; /* High-quality background image */
+    padding: 100px 0;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+}
+
+.hero-section h1, 
+.hero-section p,
+.hero-section button {
+    z-index: 2; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section h1 {
+    color: #ffffff;
+}
+
+.hero-section p {
+    color: #e0e0e0; 
+}
+
+.hero-section .rounded-circle {
+    z-index: 2;
+}
+
+.carousel img {
+    max-height: 300px; 
+    object-fit: cover; 
+}
+
+.card {
+    background-color: #1f1f1f; 
+    border: none; 
+    transition: transform 0.2s, box-shadow 0.3s; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.navbar {
+    background-color: #1f1f1f; 
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    color: #e0e0e0;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 5px; 
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffc107; 
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 50px 20px; 
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem; 
+    }
+
+    .hero-section p {
+        font-size: 1rem; 
+    }
+
+    .hero-section img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero-section button {
+        font-size: 1rem;
+        padding: 10px 20px; 
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+    }
+}
