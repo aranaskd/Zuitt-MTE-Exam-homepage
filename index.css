@@ -15,7 +15,7 @@ body {
 
 .hero-section {
     position: relative;
-    background: url('/images/hero-background.jpg') no-repeat center center/cover; /* High-quality background image */
+    background: url('/images/hero-background.jpg') no-repeat center center/cover;
     padding: 100px 0;
     color: white;
     min-height: 100vh;
@@ -117,6 +117,6 @@ body {
 
 @media (min-width: 768px) {
     .card {
-        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+        transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 }
